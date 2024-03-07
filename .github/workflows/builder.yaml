@@ -2,8 +2,6 @@ name: builder
 
 on:
   push:
-    branches:
-      - "master"
     tags:
       - "v*.*.*"
 
@@ -20,8 +18,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            rez1dent3/babichev-stat
-            ghcr.io/rez1dent3/babichev-stat
+            bavix/babichev-stat
+            ghcr.io/bavix/babichev-stat
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
